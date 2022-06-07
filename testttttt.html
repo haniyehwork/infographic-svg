@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <style>
+        svg{
+            transform: rotate(90deg);
+            margin-top: 10%;
+            margin-left: 10%;
+        }
+        
+    </style>
+</head>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="492" height="1074.2" viewBox="0 0 492 1074.2">
+  <title>Untitled-1</title>
+  <g>
+    <path class="ts1" d="M468.9,285.3v243c0,28-22,58-72,58-54,0-73,31-73,58s17,60,53,60h159c40,0,61,38,61,57s-1.5,28.5-11,38c0,0-10.4,18.2-41.4,20.2s-84,0-84,0-83-2-72,70,109,55,109,55a130,130,0,0,1,42-1c18.4,2.6,47.4,6.7,60,28s6.2,49.7-13,74c0,0-25,16-85,8,0,0-48-9-27,46v78" transform="translate(-314.9 -275.8)" fill="none" stroke-width="5" stroke="#ffc400" stroke-miterlimit="10"/>
+    <circle cx="153.4" cy="9" r="9" fill="#ffc400"/>
+    
+    <g>
+        <circle cx="153.9" cy="198.5" r="9" fill="#ffc400"/>
+    </g>
+    <circle cx="9" cy="367.6" r="9" fill="#ffc400"/>
+    <circle cx="283" cy="485.7" r="9" fill="#ffc400"/>
+    <polygon points="24.5 412 12.9 406.6 19.8 404.2 23.8 400 24.5 412" fill="#ffc400"/>
+    <polygon points="70 311 80.6 303.9 79 311 80.5 316.7 70 311" fill="#ffc400"/>
+  </g>
+  <g>
+    <polygon points="219.1 544 231.4 535.8 229.6 544 231.4 550.7 219.1 544" fill="#ffc400"/>
+    <circle cx="73.2" cy="613.4" r="9.3" fill="#ffc400"/>
+    <circle cx="283" cy="746.5" r="9.3" fill="#ffc400"/>
+    
+  </g>
+</svg>
+<body>
+    
+    <script>
+        var path = document.querySelector('.ts1');
+        var pathLength = path.getTotalLength();
+        path.style.strokeDasharray = pathLength + ' ' + pathLength;
+        path.style.strokeDashoffset = pathLength;
+        window.addEventListener("scroll", function(e) {
+            var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+            var drawLength = pathLength * scrollPercentage;
+            path.style.strokeDashoffset = pathLength - drawLength;
+        });
+        if (scrollPercentage >= 0.99) {
+            path.style.strokeDasharray = "none";
+        } else {
+            path.style.strokeDasharray = pathLength + ' ' + pathLength;
+        }
+    </script>
+    
+</body>
+</html>

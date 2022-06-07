@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p class="">
+    <audio src="" class="diau"></audio>
+
+</p>
+
+    <h1>
+
+        learn baby LEARN
+    </h1>
+    <script>
+        var myobj = {
+            "friends":[{
+                "firstName":"Mark" ,
+                "lastName":"Jones"
+            },{
+                "firstName":"Josef" ,
+                "lastName": "Glade"
+            }, {
+                "firstName":"Hailey",
+                "lastName":"Tribiani"
+            }
+        ]
+        }
+        var users = myobj.friends;
+        for(var x in users){
+            //console.log(users[x].firstName + '  ' + users[x].lastName)
+        }
+        var data = '[{"word":"hi","phonetic":"hʌɪ","phonetics":[{"text":"hʌɪ","audio":"//ssl.gstatic.com/dictionary/static/sounds/20200429/hi--_gb_1.mp3"}],"origin":"natural exclamation: first recorded in late Middle English.","meanings":[{"partOfSpeech":"exclamation","definitions":[{"definition":"used as a friendly greeting or to attract attention.","example":"‘Hi there. How was the flight?’","synonyms":[],"antonyms":[]}]}]},{"word":"HI","phonetics":[{}],"meanings":[{"partOfSpeech":"abbreviation","definitions":[{"definition":"Hawaii (in official postal use).","synonyms":[],"antonyms":[]}]}]}]';
+        var dataJSON = JSON.parse(data);
+        dataJSON.forEach(element => {
+            if (element["phonetic"])
+                console.log(element["word"]+": "+element["phonetic"]);
+
+            console.log(element["phonetics"][0]["audio"]);
+        });
+        
+    </script>
+</body>
+</html>

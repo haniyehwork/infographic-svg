@@ -1,0 +1,25 @@
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/persian-datepicker@latest/dist/css/persian-datepicker.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://unpkg.com/persian-date@latest/dist/persian-date.min.js"></script>
+    <script src="https://unpkg.com/persian-datepicker@latest/dist/js/persian-datepicker.min.js"></script>
+    <style>
+        .pwt-btn-calendar {
+            display: none !important;
+        }
+    </style>
+</head>
+
+
+
+<input type="text" class="example1" />
+<script>
+    jquery(document).ready(function () {
+        jquery(".example1").pDatepicker({
+            initialValueType: "gregorian",
+            format: "YYYY/MM/DD",
+            onSelect: "year"
+        });
+    });
+</script>

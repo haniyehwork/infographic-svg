@@ -1,0 +1,67 @@
+<header>
+    <a href="https://greensock.com/scrolltrigger">
+        <img class="greensock-icon"
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/scroll-trigger-logo-light.svg" width="200"
+            height="64" />
+    </a>
+    <style>
+        .line {
+            width: 100%;
+            max-width: 800px;
+            height: 8px;
+            margin: 0 0 10px 0;
+            position: relative;
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 1);
+        }
+    </style>
+</header>
+
+
+<div class="description panel blue">
+    <div>
+        <h1>toggleActions</h1>
+        <p>By default, ScrollTrigger simply plays the linked animation when the <code>start</code> scroll position
+            is hit, but it can perform any of the following actions at any of the four toggle points: play, pause,
+            resume, reverse, complete, restart, reset, or none.</p>
+        <div class="scroll-down">Scroll down<div class="arrow"></div>
+        </div>
+    </div>
+</div>
+
+
+<section class="panel red">
+    <p><span class="line line-red"></span>This line's animation will <strong>play</strong> when it enters the
+        viewport, and then take no other actions after that. It's the default <code>toggleActions: "play none none
+            none"</code></p>
+</section>
+
+
+<section class="panel purple">
+    <p><span class="line line-purple"></span>This line's animation will <strong>restart</strong> when it enters the
+        viewport then <code>pause</code> when it leaves, <code>resume</code> when scrolled back into view, and
+        finally <code>pause</code> when it leaves again (scrolled all the way back). <code>toggleActions: "restart
+            pause resume pause"</code></p>
+</section>
+
+
+<section class="panel orange">
+    <p><span class="line line-orange"></span>This line's animation will <strong>play</strong> when it enters the
+        viewport, <strong>complete</strong> when it leaves, <strong>reverse</strong> when you scroll it backwards
+        into the viewport again, and <strong>reset</strong> when you go all the way back past the beginning.
+        <code>toggleActions: "play complete reverse reset"</code></p>
+</section>
+
+
+<section class="panel green">
+    <p><span class="line line-green"></span>This line's animation will <strong>play</strong> when its top edge hits
+        the center of the viewport (<code>start:&nbsp;"top&nbsp;center"</code>), then it will <strong>pause</strong>
+        100px from the top of the viewport (<code>end: "top 100px"</code>). Scrolling backward past that point will
+        <strong>resume</strong>, and scrolling all the way back past center will <strong>pause</strong> again. The
+        tween also has an infinite repeat.<br><code>toggleActions: "play pause resume pause"</code></p>
+</section>
+
+
+<section class="panel gray">
+    DONE!
+</section>
